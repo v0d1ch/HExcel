@@ -1,0 +1,27 @@
+name:       HExcel
+version:    0.1.0.0
+synopsis:   Create Excel files with Haskell
+author:     Sasha Bogicevic
+maintainer: sasa.bogicevic@pm.me
+license:    BSD3
+build-type: Simple
+description: Easily create Excel files with Haskell. See README at <https://github.com/green-lambda/HExcel>
+category: Data, Text, SpreadSheet
+
+dependencies:
+  - base >= 4.5 && < 4.13
+  - transformers
+  - time
+  - microlens
+  - microlens-th
+
+ghc-options: -Wall
+
+library:
+  exposed-modules:
+    - HExcel
+  source-dirs:
+    - src
+  extra-libraries:
+    - z
+    - xlsxwriter
