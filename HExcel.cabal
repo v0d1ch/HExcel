@@ -1,0 +1,59 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 81cb48218c34e3f0cdfa55e154b87ec610fe9ab2292ba6c1f93eb660176fd24b
+
+name:           HExcel
+version:        0.0.1.0
+synopsis:       Write Excel files with Haskell
+author:         Sasha Bogicevic
+maintainer:     sasa.bogicevic@pm.me
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      HExcel
+  other-modules:
+      HExcel.Ffi
+      HExcel.HExcelInternal
+      HExcel.Types
+      Paths_HExcel
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -O2
+  include-dirs:
+      thirdparty/include
+  c-sources:
+      thirdparty/src/app.c
+      thirdparty/src/chart.c
+      thirdparty/src/content_types.c
+      thirdparty/src/core.c
+      thirdparty/src/custom.c
+      thirdparty/src/drawing.c
+      thirdparty/src/format.c
+      thirdparty/src/hash_table.c
+      thirdparty/src/packager.c
+      thirdparty/src/relationships.c
+      thirdparty/src/shared_strings.c
+      thirdparty/src/styles.c
+      thirdparty/src/theme.c
+      thirdparty/src/utility.c
+      thirdparty/src/workbook.c
+      thirdparty/src/worksheet.c
+      thirdparty/src/xmlwriter.c
+      thirdparty/third_party/minizip/ioapi.c
+      thirdparty/third_party/minizip/zip.c
+      thirdparty/third_party/tmpfileplus/tmpfileplus.c
+  extra-libraries:
+      z
+  build-depends:
+      base
+    , data-default
+    , time
+    , transformers
+  default-language: Haskell2010

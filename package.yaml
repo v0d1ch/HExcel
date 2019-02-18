@@ -1,0 +1,49 @@
+name:       HExcel
+version:    0.0.1.0
+synopsis:   Write Excel files with Haskell
+author:     Sasha Bogicevic
+maintainer: sasa.bogicevic@pm.me
+license:    BSD3
+build-type: Simple
+# cabal-version: 2.4
+
+dependencies:
+  - base
+  - data-default
+  - transformers
+  - time
+
+ghc-options: -Wall -O2
+
+library:
+  exposed-modules:
+    - HExcel
+  source-dirs:
+    - src
+  include-dirs:
+    - thirdparty/include
+  c-sources:
+    - thirdparty/src/app.c
+    - thirdparty/src/chart.c
+    - thirdparty/src/content_types.c
+    - thirdparty/src/core.c
+    - thirdparty/src/custom.c
+    - thirdparty/src/drawing.c
+    - thirdparty/src/format.c
+    - thirdparty/src/hash_table.c
+    - thirdparty/src/packager.c
+    - thirdparty/src/relationships.c
+    - thirdparty/src/shared_strings.c
+    - thirdparty/src/styles.c
+    - thirdparty/src/theme.c
+    - thirdparty/src/utility.c
+    - thirdparty/src/workbook.c
+    - thirdparty/src/worksheet.c
+    - thirdparty/src/xmlwriter.c
+    - thirdparty/third_party/minizip/ioapi.c
+    - thirdparty/third_party/minizip/zip.c
+    - thirdparty/third_party/tmpfileplus/tmpfileplus.c
+  extra-libraries:
+    - z
+
+
