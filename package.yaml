@@ -9,7 +9,7 @@ description: Easily create Excel files with Haskell. See README at <https://gith
 category: Data, Text, SpreadSheet
 
 dependencies:
-  - base >= 4.5 && < 4.13
+  - base >= 4.5 && < 5
   - transformers
   - time
   - microlens
